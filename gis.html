@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+</head>
+<body>
+
+<h1>Map of Parks and Transit stations</h1>
+
+<!-- Embedding PDF -->
+<object data="map.pdf" type="application/pdf" width="100%" height="600px">
+    <p>Sorry, this PDF cannot be displayed. Please <a href="example.pdf">download</a> it instead.</p>
+</object>
+
+<!-- Text below PDF -->
+<div>
+    <h2>Description</h2>
+    <p>*Please note* The parks are represented in blue, and the stations in either red, yellow or green.<br /> In this spatial analysis project, I pulled data from Metrolix and the city of Toronto to obtain the locations of parks and transit stations.<br />
+        I then categorized the stations in one of three categories: Low(red), Moderate(yellow) and High(green). The criteria for these categories were as follows: high if a station is within 200 meters of a public park, moderate if a station is between 200 and 500 meters of a public park, and low if a station is more than 500 meters away from a public park.<br><br>
+        The station dataset from metrolinx included all stations in the GTA as well as stations that do not exist yet such as the Ontario line.<br />Because I only wanted to focus on existing stations within Toronto, I filtered the dataset to remove the ones still in the planning phase as well as the ones located outside of Toronto. I then utilized a built-in distance matrix function to obtain all the distances between each station and its nearest park.
+        Finally, I assigned the category based on the distance between the station and its closest public park and assigned the colour accordingly. I am still working to make the map more interactive on the website. </p>
+</div>
+
+<footer>
+    <p>&copy; 2024 Keadon Harrison. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
